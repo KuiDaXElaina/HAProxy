@@ -29,7 +29,6 @@ perform_install() {
 
 
 main() {
-  print_brake 72
   echo "* HAProxy 配置."
   echo ""
 
@@ -60,22 +59,18 @@ main() {
 }
 
 summary() {
-  print_brake 62
   echo "「HAProxy 配置」"
   echo "* 主機IP位置: $INSTANCE_IPV4"
   echo "* 主機Port編號: $EXPOSED_PORT"
   echo "* 目標IP位置: $BACKEND_HOST"
   echo ""  
-  print_brake 62
 }
 
 goodbye() {
-  print_brake 62
   echo "* HAProxy 安裝完成"
   echo "*"
 
   echo "您現在可以使用 '${INSTANCE_IPV4}:${EXPOSED_PORT}' 連接到您的Minecraft伺服器"
-  print_brake 62
 }
 
 # run script
